@@ -14,6 +14,7 @@ if($_POST('teste')){
         die('Erro na conexão com o banco de dados: ' . $mysqli->connect_error);
     }
     
+
     // Consulta SQL
     $sql = "";
 
@@ -25,12 +26,12 @@ if($_POST('teste')){
 
     // Verifica se houve erros na consulta
     if (!$resultado) {
-    die(json_encode(['status' => 'error', 'mesagem' => 'Erro na consulta SQL: ' . $mysqli->error]));
+        die('Erro na conexão com o banco de dados: ' . $mysqli->error);
     }
 
     // Verifica se a consulta voltou algum dado
     if (count($return) <= 0) {
-    die(json_encode(['status' => 'error', 'mesagem' => 'Nenhum dado encontrado.']));
+    die(json_encode(['status' => 'error', 'message' => 'Nenhum dado encontrado.']));
     }
 
     // Fecha a conexão com o banco de dados
