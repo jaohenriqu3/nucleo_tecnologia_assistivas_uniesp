@@ -16,7 +16,11 @@ if($_POST('teste')){
     
 
     // Consulta SQL
-    $sql = "";
+    $sql = "SELECT
+                *
+            FROM
+                table
+    ";
 
     // Executa a consulta
     $resultado = $mysqli->query($sql);
