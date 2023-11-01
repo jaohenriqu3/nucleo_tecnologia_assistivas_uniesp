@@ -10,6 +10,6 @@ CREATE TABLE Usuarios (
   `Numero` int DEFAULT NULL,
   `Complemento` varchar(20) DEFAULT NULL,
   `Bairro` varchar(20) DEFAULT NULL,
-  `Codigo_postal` int DEFAULT NULL,
+  `CEP` int DEFAULT NULL,
   `Cidade` varchar(30) DEFAULT NULL,
   `Estado` varchar(20) DEFAULT NULL ) 
